@@ -1,16 +1,19 @@
-# React + Vite
+Eco-Scan AI
+An interactive, AI-powered map dashboard designed to track industrial air pollution and give people clear, immediate safety advice. Built specifically with the Sahibabad Industrial Area (and the IPEC Campus) in mind.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Why We Built This
+Most weather apps just show you a generic AQI number. But telling a resident or a student that PM2.5 is at 150 mg/m³ doesn't help them figure out what to do next. On top of that, official sensors are miles apart and completely miss hyper-local pollution spikes caused by factories releasing smoke unexpectedly.
 
-Currently, two official plugins are available:
+Eco-Scan AI fixes this in three ways:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Interactive Tracking: It maps real-time pollution data directly onto a local map layer.
 
-## React Compiler
+AI Action Plans: It uses Google Gemini to translate raw chemical data into clear, human-centric health protocols (like advising deep-lung protection for particulates versus sealing windows for gas leaks).
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Crowdsourced Reports: If a user spots a factory illegally releasing smoke, they can click the map to drop a warning pin and instantly alert other users, earning Green Credits for helping the community.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+The Tech Stack
+Frontend: React 19 + Vite (Keeps the app fast and responsive on mobile)
+Map Layer: Leaflet & React-Leaflet (Handles geographic coordinates and custom hazard circles)
+Weather Data: OpenWeather Air Pollution API (Tracks PM2.5, PM10, NO2, SO2, CO, and O3)
+AI Core: Google Gemini 1.5 Flash SDK (Acts as our digital toxicologist for instant advice)
